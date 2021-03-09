@@ -62,6 +62,21 @@ export default function App() {
           <Image style={styles.mejores} source={require("./img/img10.jpg")} />
         </View>
       </View>
+      <Text style={styles.titulo2}>Lo más escuchado</Text>
+      <View style={styles.listado}>
+        <View style={styles.listadoitem}>
+          <Image style={styles.buscados} source={require("./img/img11.jpg")} />
+        </View>
+        <View style={styles.listadoitem}>
+          <Image style={styles.buscados} source={require("./img/img12.jpg")} />
+        </View>
+        <View style={styles.listadoitem}>
+          <Image style={styles.buscados} source={require("./img/img13.jpg")} />
+        </View>
+        <View style={styles.listadoitem}>
+          <Image style={styles.buscados} source={require("./img/img14.jpg")} />
+        </View>
+      </View>
     </ScrollView>
   );
 }
@@ -111,5 +126,18 @@ const styles = StyleSheet.create({
     height: 350,
     width: "100%",
     marginBottom: 10,
+  },
+  buscados: {
+    marginTop: 30,
+    height: 200,
+    width: "100%",
+  },
+  listado: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  listadoitem: {
+    flexBasis: "49%",
   },
 });
