@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "cornflowerblue",
     flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   caja1: {
     padding: 20,
