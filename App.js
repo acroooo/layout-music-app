@@ -6,7 +6,7 @@ export default function App() {
   // Flex
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.banner}>
         <Image style={styles.bg} source={require("./img/bg.jpg")} />
       </View>
@@ -45,8 +45,24 @@ export default function App() {
             />
           </View>
         </ScrollView>
+        <Text style={styles.titulo2}>Éxitos recomendados</Text>
+        <View>
+          <Image style={styles.mejores} source={require("./img/img6.jpg")} />
+        </View>
+        <View>
+          <Image style={styles.mejores} source={require("./img/img7.jpg")} />
+        </View>
+        <View>
+          <Image style={styles.mejores} source={require("./img/img8.jpg")} />
+        </View>
+        <View>
+          <Image style={styles.mejores} source={require("./img/img9.jpg")} />
+        </View>
+        <View>
+          <Image style={styles.mejores} source={require("./img/img10.jpg")} />
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -69,6 +85,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
   },
+  titulo2: {
+    marginTop: 30,
+    color: "#1DB954",
+    fontSize: 30,
+    fontWeight: "bold",
+  },
   subtitulo: {
     color: "#1DB954",
     fontSize: 18,
@@ -83,5 +105,11 @@ const styles = StyleSheet.create({
     height: 250,
     width: 300,
     marginRight: 20,
+  },
+  mejores: {
+    marginTop: 30,
+    height: 350,
+    width: "100%",
+    marginBottom: 10,
   },
 });
