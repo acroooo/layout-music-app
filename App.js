@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 
 export default function App() {
   // Layouts
@@ -7,36 +7,81 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.caja1}></View>
-      <View style={styles.caja2}></View>
-      <View style={styles.caja3}></View>
-      <View style={styles.caja4}></View>
+      <View style={styles.banner}>
+        <Image style={styles.bg} source={require("./img/bg.jpg")} />
+      </View>
+      <View style={styles.contenedorTexto}>
+        <Text style={styles.titulo}>Buenos días</Text>
+        <Text style={styles.subtitulo}>Tus mañanas comienzan bien arriba</Text>
+        <ScrollView horizontal>
+          <View>
+            <Image
+              style={styles.tapadisco}
+              source={require("./img/img1.jpg")}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.tapadisco}
+              source={require("./img/img2.jpg")}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.tapadisco}
+              source={require("./img/img3.jpg")}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.tapadisco}
+              source={require("./img/img4.jpg")}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.tapadisco}
+              source={require("./img/img5.jpg")}
+            />
+          </View>
+        </ScrollView>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  bg: {
+    height: 250,
     flex: 1,
-    backgroundColor: "cornflowerblue",
+  },
+  banner: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    borderBottomColor: "#1DB954",
+    borderWidth: 2,
   },
-  caja1: {
-    padding: 20,
-    backgroundColor: "navy",
+  container: {
+    backgroundColor: "#000000",
+    flex: 1,
   },
-  caja2: {
-    padding: 20,
-    backgroundColor: "yellow",
+  titulo: {
+    color: "#1DB954",
+    fontSize: 30,
+    fontWeight: "bold",
   },
-  caja3: {
-    padding: 20,
-    backgroundColor: "green",
+  subtitulo: {
+    color: "#1DB954",
+    fontSize: 18,
+    marginBottom: 10,
+    fontWeight: "bold",
   },
-  caja4: {
-    padding: 20,
-    backgroundColor: "teal",
+  contenedorTexto: {
+    marginTop: 30,
+    marginHorizontal: 20,
+  },
+  tapadisco: {
+    height: 250,
+    width: 300,
+    marginRight: 20,
   },
 });
